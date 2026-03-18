@@ -13,7 +13,7 @@ export default function Experience() {
             <div className="relative aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
               <Image
                 src="/images/experience.jpg"
-                alt="Inside Theia Coffee House"
+                alt="Inside Theia House"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"

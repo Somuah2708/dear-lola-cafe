@@ -62,7 +62,7 @@ export default function Navbar() {
               scrolled ? "text-coffee-brown" : "text-cream"
             }`}
           >
-            THEIA
+            THEIA HOUSE
           </Link>
 
           {/* Desktop Nav */}

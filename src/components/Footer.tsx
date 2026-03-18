@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             {/* Brand */}
             <div className="lg:col-span-1">
-              <h3 className="font-display text-2xl font-bold tracking-wide mb-4">THEIA</h3>
+              <h3 className="font-display text-2xl font-bold tracking-wide mb-4">THEIA HOUSE</h3>
               <p className="font-body text-sm text-cream/60 leading-relaxed">
                 An Afro-Mediterranean inspired, family-owned café, bookstore, work hub, community, art &amp; events space in Accra.
               </p>

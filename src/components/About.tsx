@@ -53,7 +53,7 @@ export default function About() {
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src="/images/about.jpg"
-                  alt="The team at Theia Coffee House"
+                  alt="The team at Theia House"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

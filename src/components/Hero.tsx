@@ -14,30 +14,18 @@ export default function Hero() {
       {/* Background Fallback Image */}
       <Image
         src="/images/hero-fallback.jpg"
-        alt="Theia Coffee House"
+        alt="Theia House"
         fill
         priority
         className="object-cover z-0"
         sizes="100vw"
       />
 
-      {/* Background Video (loads on top of image when available) */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/images/hero-fallback.jpg"
-        className="absolute inset-0 z-[1] w-full h-full object-cover"
-      >
-        <source src="/videos/coffee-hero.mp4" type="video/mp4" />
-      </video>
-
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-[2] bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 
       {/* Content */}
-      <div className="relative z-[3] h-full flex flex-col items-center justify-center text-center section-padding">
+      <div className="relative z-[2] h-full flex flex-col items-center justify-center text-center section-padding">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +41,7 @@ export default function Hero() {
           />
 
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream tracking-wide leading-[1.1]">
-            THEIA
+            THEIA HOUSE
           </h1>
 
           <motion.p
