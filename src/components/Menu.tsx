@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import RevealOnScroll from "./RevealOnScroll";
 
-const categories = ["Coffees & Teas", "Breakfast All Day", "Sandwiches & Wraps", "Comfort Food", "Desserts & Pastries", "Thirst Quenchers"];
+const categories = ["Coffees & Hot Drinks", "Pastries & Bakes", "Sandwiches & Focaccia", "Mains", "Cold Drinks", "Desserts"];
 
 interface MenuItem {
   name: string;
@@ -15,46 +15,47 @@ interface MenuItem {
 }
 
 const menuData: Record<string, MenuItem[]> = {
-  "Coffees & Teas": [
-    { name: "Espresso", description: "Regular single or double shot of pure coffee", price: "GHS 30", image: "/images/menu-espresso.jpg" },
-    { name: "Café Latte", description: "Smooth espresso with steamed milk", price: "GHS 60", image: "/images/gallery-latte-art.jpg" },
-    { name: "Flat White", description: "Rich espresso topped with velvety micro-foam", price: "GHS 65", image: "/images/gallery-latte-2.jpg" },
-    { name: "Cappuccino", description: "Classic espresso with steamed milk and deep foam", price: "GHS 55", image: "/images/menu-espresso.jpg" },
-    { name: "Cortado", description: "Equal parts espresso and steamed milk", price: "GHS 55", image: "/images/gallery-latte-2.jpg" },
-    { name: "Ginger Mix Tea", description: "Hot, soothing ginger-infused tea", price: "GHS 60", image: "/images/gallery-smoothie.jpg" },
+  "Coffees & Hot Drinks": [
+    { name: "Americano", description: "Clean, bold espresso topped with hot water", price: "GHS 20", image: "/images/dl-latte.jpg" },
+    { name: "Café Latte", description: "Double shot espresso with silky steamed milk", price: "GHS 30", image: "/images/dl-latte.jpg" },
+    { name: "Flat White", description: "Rich espresso with velvety micro-foam", price: "GHS 30", image: "/images/dl-latte.jpg" },
+    { name: "Cappuccino", description: "Classic espresso with steamed milk and thick foam", price: "GHS 28", image: "/images/dl-latte.jpg" },
+    { name: "Ginger Infusion", description: "Warming ginger and lemon infused hot tea", price: "GHS 22", image: "/images/dl-food-3.jpg" },
+    { name: "Chamomile Tea", description: "Soothing floral herbal tea, served hot", price: "GHS 20", image: "/images/dl-food-3.jpg" },
   ],
-  "Breakfast All Day": [
-    { name: "The Bombastic", description: "Smashed avocado, poached eggs, bacon, mozzarella bite, tomato on sourdough toast", price: "GHS 150", image: "/images/menu-eggs-brunch.jpg" },
-    { name: "The Fantastique", description: "Smoked salmon on sourdough with cream cheese, avocado, capers, pickles, herbs and onions", price: "GHS 200", image: "/images/menu-salmon.jpg" },
-    { name: "The American", description: "Eggs your way, sautéed mushrooms & potatoes, beef bacon, toast, baked beans, sausages", price: "GHS 170", image: "/images/gallery-coffee-art.jpg" },
-    { name: "Enjoyment", description: "Layered pancakes with cheese, beef bacon, chicken strips, hash browns and mushroom", price: "GHS 150", image: "/images/menu-latte.jpg" },
-    { name: "The Perfect Pancake Stack", description: "Classic stack with syrup or seasonal fruits", price: "GHS 100", image: "/images/menu-pancakes-stack.jpg" },
+  "Pastries & Bakes": [
+    { name: "Plain Croissant", description: "Buttery, hand-rolled croissant baked fresh each morning", price: "GHS 12", image: "/images/dl-food-2.jpg" },
+    { name: "Pain au Chocolat", description: "Warm, flaky pastry filled with rich dark chocolate", price: "GHS 14", image: "/images/dl-food-2.jpg" },
+    { name: "Sakura Pink Croissant", description: "Our signature rose-tinted croissant — delicate, beautiful and irresistible", price: "GHS 18", image: "/images/dl-food-2.jpg" },
+    { name: "Nutella Crêpe", description: "Thin, golden crêpe with rich Nutella and a dusting of icing sugar", price: "GHS 24", image: "/images/dl-food-1.jpg" },
+    { name: "Waffles", description: "Golden waffles with seasonal toppings and syrup — made to order", price: "GHS 25", image: "/images/dl-food-1.jpg" },
+    { name: "French Toast", description: "Thick-cut brioche dipped in egg custard, served with fresh berries", price: "GHS 25", image: "/images/dl-food-1.jpg" },
   ],
-  "Sandwiches & Wraps": [
-    { name: "Goat Cheese", description: "With tangy arugula & cranberries", price: "GHS 100", image: "/images/menu-wrap.jpg" },
-    { name: "Oven Grilled Chicken", description: "In a cashew basil pesto", price: "GHS 110", image: "/images/menu-brunch-plate.jpg" },
-    { name: "Egg Club", description: "The classic way", price: "GHS 90", image: "/images/gallery-brunch-2.jpg" },
-    { name: "Beef Shawarma", description: "With hummus & wedges", price: "GHS 125", image: "/images/menu-wrap.jpg" },
-    { name: "Falafel Wrap", description: "With hummus & wedges", price: "GHS 110", image: "/images/menu-avocado-toast-new.jpg" },
+  "Sandwiches & Focaccia": [
+    { name: "Smoked Salmon Focaccia", description: "House-baked focaccia with smoked salmon, cream cheese, capers and herbs", price: "GHS 35", image: "/images/dl-food-4.png" },
+    { name: "Avocado Toast", description: "Smashed avocado on toasted sourdough with a soft egg and chilli flakes", price: "GHS 28", image: "/images/dl-food-5.jpg" },
+    { name: "Egg & Avo Focaccia", description: "Our house focaccia loaded with egg, avocado and fresh greens", price: "GHS 30", image: "/images/dl-food-6.png" },
+    { name: "Chicken Pesto Sandwich", description: "Grilled chicken in cashew basil pesto on toasted sourdough", price: "GHS 32", image: "/images/dl-food-4.png" },
+    { name: "Goat Cheese & Arugula", description: "Whipped goat cheese with peppery arugula and cranberries", price: "GHS 28", image: "/images/dl-food-4.png" },
   ],
-  "Comfort Food": [
-    { name: "Chicken Escalope Love", description: "With wedge potatoes & coleslaw", price: "GHS 170", image: "/images/menu-rice-comfort.jpg" },
-    { name: "Champion Jollof", description: "With oven baked chicken & chilli", price: "GHS 150", image: "/images/menu-rice-comfort.jpg" },
-    { name: "Chicken Stir Fry Cravings", description: "With veggie fried rice", price: "GHS 160", image: "/images/menu-brunch-plate.jpg" },
-    { name: "Fish & Chip Chop", description: "Pub grub revisited", price: "GHS 170", image: "/images/menu-salmon.jpg" },
+  "Mains": [
+    { name: "Creamy Mushroom Prawn Pasta", description: "Our signature — creamy sauce, king prawns, sautéed mushrooms and fresh pasta", price: "GHS 55", image: "/images/dl-food-4.png" },
+    { name: "Prawn Salad", description: "Fresh garden leaves with seasoned prawns, cherry tomatoes and lemon dressing", price: "GHS 45", image: "/images/dl-food-3.jpg" },
+    { name: "Chicken Focaccia Plate", description: "Herb-roasted chicken on house focaccia with garden salad and aioli", price: "GHS 50", image: "/images/dl-food-6.png" },
+    { name: "Pasta Arrabbiata", description: "Hand-rolled pasta in a slow-cooked tomato and chilli sauce", price: "GHS 40", image: "/images/dl-food-4.png" },
   ],
-  "Desserts & Pastries": [
-    { name: "Crab Mango Tart", description: "Signature tart with crab, fresh mango and herbs — a Café Clair showstopper", price: "GHS 75", image: "/images/menu-tart.jpg" },
-    { name: "Classic Cheesecake", description: "Rich, velvety cheesecake on a buttery biscuit base", price: "GHS 75", image: "/images/menu-cheesecake-nice.jpg" },
-    { name: "Ham Croquette", description: "Golden croquette with ham filling and aioli dipping sauce", price: "GHS 60", image: "/images/menu-croissant.jpg" },
-    { name: "Sausage Croissant", description: "Buttery, flaky croissant filled with savoury sausage", price: "GHS 50", image: "/images/menu-pastry-display.jpg" },
-    { name: "Pain au Chocolat", description: "Warm, golden pastry with rich dark chocolate filling", price: "GHS 45", image: "/images/menu-pain-chocolat.jpg" },
+  "Cold Drinks": [
+    { name: "Butterfly Pea Lemonade", description: "Stunning violet-blue lemonade that changes colour — floral and refreshing", price: "GHS 30", image: "/images/dl-food-3.jpg" },
+    { name: "Mint Lemonade", description: "Fresh mint steeped with lemon and a touch of honey, served over ice", price: "GHS 25", image: "/images/dl-food-3.jpg" },
+    { name: "Strawberry Milkshake", description: "Creamy strawberry blend, thick and indulgent", price: "GHS 30", image: "/images/dl-food-3.jpg" },
+    { name: "Iced Latte", description: "Chilled espresso poured over ice with cold milk", price: "GHS 28", image: "/images/dl-latte.jpg" },
+    { name: "Hibiscus Cooler", description: "Floral hibiscus with ginger and a squeeze of lime, served tall", price: "GHS 25", image: "/images/dl-food-3.jpg" },
   ],
-  "Thirst Quenchers": [
-    { name: "Bananarama Smoothie", description: "Banana, strawberry, mango", price: "GHS 70", image: "/images/gallery-smoothie.jpg" },
-    { name: "Café Clair Mocktail", description: "Sugar cane, grenadine, lemon, iced tea", price: "GHS 80", image: "/images/gallery-latte-2.jpg" },
-    { name: "Berry Lemonade", description: "Strawberry with syrup, fresh mint and lemon", price: "GHS 80", image: "/images/gallery-smoothie.jpg" },
-    { name: "Piña Colada", description: "Fresh pineapple juice, coconut cream, rum", price: "GHS 120", image: "/images/gallery-smoothie.jpg" },
+  "Desserts": [
+    { name: "Classic Cheesecake", description: "Creamy cheesecake on a buttery biscuit base — rich and satisfying", price: "GHS 25", image: "/images/dl-food-1.jpg" },
+    { name: "Seasonal Fruit Tart", description: "Crisp pastry shell with vanilla cream and fresh seasonal fruit", price: "GHS 22", image: "/images/dl-food-1.jpg" },
+    { name: "Chocolate Brownie", description: "Dense, fudgy chocolate brownie served warm with cream", price: "GHS 20", image: "/images/dl-food-1.jpg" },
+    { name: "Granola Yoghurt Cup", description: "House granola with thick yoghurt and tropical fruit compote", price: "GHS 18", image: "/images/dl-food-1.jpg" },
   ],
 };
 
@@ -71,7 +72,7 @@ export default function Menu() {
             </span>
             <h2 className="heading-lg mb-4">From Our Kitchen</h2>
             <p className="body-md max-w-2xl mx-auto">
-              Handcrafted pastries, thoughtfully prepared meals and perfectly brewed coffee — every item made with care and intention.
+              Everything on our menu is handmade from scratch — from the croissants we roll each morning to the pasta we fold by hand. Made with love, served with joy.
             </p>
           </div>
         </RevealOnScroll>

@@ -15,32 +15,34 @@ export default function About() {
                 Our Story
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-cream mb-6">
-                About Café Clair
+                About Dear Lola
               </h2>
               <p className="font-body text-lg text-cream/70 leading-relaxed mb-6">
-                Café Clair is a refined new concept in the heart of East Legon,
-                thoughtfully managed by District Management. We blend the best of
-                pâtisserie, restaurant, and bar into one beautifully curated space.
+                Dear Lola is a beloved neighbourhood café tucked into the lush
+                streets of Osu, Accra. Born from a love of handcrafted food and
+                intimate spaces, we&apos;ve created a little corner of the city where
+                everything is made with care — from our freshly baked croissants
+                to our slowly brewed coffees.
               </p>
               <p className="font-body text-base text-cream/60 leading-relaxed mb-4">
-                Every detail at Café Clair is intentional — from our handcrafted
-                pastries baked fresh each morning to our perfectly brewed coffees
-                and an evening bar programme designed for meaningful moments. We
-                believe a great space feeds more than just hunger.
+                Each morning, our small kitchen fills with the scent of buttered
+                pastry and warm spice. Our space is adorned with lush plants and
+                colourful blooms — a quiet sanctuary where time slows down and
+                every detail feels personal.
               </p>
               <p className="font-body text-base text-cream/60 leading-relaxed mb-8">
-                Whether you&apos;re joining us for a leisurely brunch, a focused work
-                session, or a special evening out — Café Clair is your home away
-                from home in East Legon.
+                Whether you&apos;re stopping by for a solo breakfast, a focused work
+                session, or a long catch-up with a friend — Dear Lola welcomes
+                you like a letter to someone you love.
               </p>
 
               {/* Signature */}
               <div className="pt-6 border-t border-cream/10">
                 <p className="font-display text-xl italic text-cream/80">
-                  &ldquo;Where every visit is an experience worth savouring.&rdquo;
+                  &ldquo;A little café made with a lot of love.&rdquo;
                 </p>
                 <p className="font-body text-sm text-cream/50 mt-2 tracking-wider uppercase">
-                  — The Café Clair Team
+                  — Lola
                 </p>
               </div>
             </div>
@@ -51,8 +53,8 @@ export default function About() {
             <div className="relative">
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
-                  src="/images/about.jpg"
-                  alt="Inside Café Clair"
+                  src="/images/dl-interior.jpg"
+                  alt="Inside Dear Lola Café"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -15,13 +17,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CAFÉ CLAIR | Pâtisserie, Restaurant & Bar in East Legon, Accra",
+  title: "DEAR LOLA | Artisan Café in Osu, Accra",
   description:
-    "Café Clair — a refined concept blending pâtisserie, restaurant & bar, offering handcrafted pastries, meals and perfectly brewed coffee in East Legon, Accra, Ghana.",
-  keywords: ["Café Clair", "café", "Accra", "Ghana", "patisserie", "East Legon", "brunch", "restaurant", "bar", "pastries", "coffee"],
+    "Dear Lola — a beloved artisan café in the heart of Osu, Accra. Handmade croissants, focaccia, pasta, milkshakes and carefully brewed coffee in a lush, intimate setting.",
+  keywords: ["Dear Lola", "café", "Accra", "Ghana", "Osu", "artisan", "croissants", "brunch", "coffee", "pastries", "focaccia"],
   openGraph: {
-    title: "CAFÉ CLAIR",
-    description: "A refined pâtisserie, restaurant & bar in East Legon, Accra.",
+    title: "DEAR LOLA",
+    description: "Artisan bakes & handcrafted drinks in the heart of Osu, Accra.",
     type: "website",
   },
 };
@@ -32,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="antialiased overflow-x-hidden">{children}</body>
     </html>
   );

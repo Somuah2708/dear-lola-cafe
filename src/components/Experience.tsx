@@ -12,8 +12,8 @@ export default function Experience() {
           <RevealOnScroll>
             <div className="relative aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
               <Image
-                src="/images/experience.jpg"
-                alt="Inside Café Clair"
+                src="/images/dl-mirrors.jpg"
+                alt="The circular mirror wall at Dear Lola Café"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -30,31 +30,30 @@ export default function Experience() {
                 The Experience
               </span>
               <h2 className="heading-lg mb-6">
-                Where Craft Meets
+                Small Space,
                 <br />
-                Refined Taste
+                Big Heart
               </h2>
               <p className="body-lg mb-6">
-                At Café Clair, every detail is considered. From the warm
-                croissants that greet your morning to the perfectly pulled
-                espresso and the elegant evening cocktails — this is dining
-                as it should be.
+                At Dear Lola, everything is made from scratch. From the
+                buttery croissants fresh out of the oven each morning to the
+                creamy pastas and handcrafted cold drinks — this is food
+                made with genuine care.
               </p>
               <p className="body-md mb-8">
-                With beautiful indoor and outdoor spaces, a stunning interior,
-                and a menu that spans breakfast through dinner, Café Clair is
-                the destination for those who appreciate the finer things in
-                Accra&apos;s East Legon.
+                Nestled on Osu Link, our intimate café is filled with plants,
+                natural light and a warmth that makes every visit feel like
+                coming home. Small by design — special by nature.
               </p>
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-coffee-brown/10">
                 <div>
-                  <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">8K+</p>
-                  <p className="font-body text-sm text-dark/50 mt-1">Followers</p>
+                  <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">4.3★</p>
+                  <p className="font-body text-sm text-dark/50 mt-1">Rated</p>
                 </div>
                 <div>
-                  <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">5★</p>
-                  <p className="font-body text-sm text-dark/50 mt-1">Rated</p>
+                  <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">100%</p>
+                  <p className="font-body text-sm text-dark/50 mt-1">Handmade</p>
                 </div>
                 <div>
                   <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">7</p>

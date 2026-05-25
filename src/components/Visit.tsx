@@ -3,11 +3,11 @@
 import RevealOnScroll from "./RevealOnScroll";
 
 const hours = [
-  { day: "Monday – Sunday", time: "8:00 AM – 10:00 PM" },
+  { day: "Monday – Sunday", time: "8:00 AM – 5:00 PM" },
 ];
 
 export default function Visit() {
-  const whatsappLink = "https://wa.me/233557272727?text=Hi%20Café%20Clair!%20I%27d%20like%20to%20make%20a%20reservation.";
+  const whatsappLink = "https://wa.me/233553714884?text=Hi%20Dear%20Lola!%20I%27d%20like%20to%20make%20a%20reservation.";
 
   return (
     <section id="visit" className="section-spacing section-padding bg-cream">
@@ -17,9 +17,9 @@ export default function Visit() {
             <span className="font-body text-sm tracking-[0.3em] uppercase text-sage mb-4 block">
               Find Us
             </span>
-            <h2 className="heading-lg mb-4">Visit Café Clair</h2>
+            <h2 className="heading-lg mb-4">Visit Dear Lola</h2>
             <p className="body-md max-w-2xl mx-auto">
-              We&apos;d love to welcome you. Drop by for a coffee or reserve a table for your next gathering.
+              We&apos;d love to have you. Drop in for a slow coffee, a handmade bite, or a quiet morning to yourself.
             </p>
           </div>
         </RevealOnScroll>
@@ -29,14 +29,14 @@ export default function Visit() {
           <RevealOnScroll>
             <div className="relative aspect-[4/3] overflow-hidden bg-cream-dark">
               <iframe
-                src="https://maps.google.com/maps?q=Lizzy+Sports+Complex+East+Legon+Accra+Ghana&t=m&z=15&output=embed"
+                src="https://maps.google.com/maps?q=Nyaniba+Estates+Osu+Accra+Ghana&t=m&z=15&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Café Clair — East Legon, Accra"
+                title="Dear Lola — Osu, Accra"
                 className="absolute inset-0"
               />
             </div>
@@ -49,9 +49,9 @@ export default function Visit() {
               <div>
                 <h3 className="heading-sm mb-3">Address</h3>
                 <p className="body-md">
-                  Opposite Lizzy Sports Complex
+                  Osu Link, Nyaniba Estates
                   <br />
-                  East Legon, Accra, Ghana
+                  Osu, Accra, Ghana
                 </p>
               </div>
 
@@ -72,10 +72,10 @@ export default function Visit() {
               <div>
                 <h3 className="heading-sm mb-3">Phone</h3>
                 <a
-                  href="tel:+233557272727"
+                  href="tel:+233553714884"
                   className="font-body text-lg text-coffee-brown hover:text-sage transition-colors duration-300"
                 >
-                  +233 55 727 2727
+                  +233 55 371 4884
                 </a>
               </div>
 

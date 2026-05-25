@@ -13,8 +13,8 @@ export default function Hero() {
     <section id="home" className="relative h-screen w-full overflow-hidden">
       {/* Background Fallback Image */}
       <Image
-        src="/images/hero-fallback.jpg"
-        alt="Café Clair"
+        src="/images/dl-hero.jpg"
+        alt="Dear Lola Café garden"
         fill
         priority
         className="object-cover z-0"
@@ -22,35 +22,35 @@ export default function Hero() {
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/50 via-black/25 to-black/60" />
 
       {/* Content */}
-      <div className="relative z-[2] h-full flex flex-col items-center justify-center text-center section-padding">
+      <div className="relative z-[2] h-full flex flex-col items-start justify-center section-padding">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
-          className="max-w-3xl"
+          className="max-w-2xl"
         >
           {/* Decorative line */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="w-16 h-[1px] bg-cream/50 mx-auto mb-8"
+            className="w-16 h-[1px] bg-cream/50 mb-8 origin-left"
           />
 
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream tracking-wide leading-[1.1]">
-            CAFÉ CLAIR
+            DEAR LOLA
           </h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-6 md:mt-8 font-body text-lg md:text-xl text-cream/70 tracking-wide font-light max-w-xl mx-auto"
+            className="mt-6 md:mt-8 font-body text-lg md:text-xl text-cream/70 tracking-wide font-light max-w-md"
           >
-            A refined pâtisserie, restaurant &amp; bar in East Legon, Accra.
+            Artisan bakes &amp; handcrafted drinks in the heart of Osu, Accra.
           </motion.p>
 
           {/* Buttons */}
@@ -58,7 +58,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
-            className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="mt-10 md:mt-12 flex flex-col sm:flex-row items-start gap-4"
           >
             <button
               onClick={() => scrollTo("#menu")}

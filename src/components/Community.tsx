@@ -5,24 +5,24 @@ import RevealOnScroll from "./RevealOnScroll";
 
 const features = [
   {
-    title: "Indoor & Outdoor Dining",
-    description: "Beautiful, thoughtfully designed indoor and outdoor spaces — perfect for intimate breakfasts, relaxed lunches, or breezy evening gatherings.",
+    title: "Handmade Every Morning",
+    description: "Every croissant, tart and pastry is made from scratch in our kitchen daily — no shortcuts, just honest baking with quality ingredients.",
+    icon: "🥐",
+  },
+  {
+    title: "A Plant-Filled Sanctuary",
+    description: "Settle into our lush, green-filled space adorned with colourful blooms. A quiet corner of Osu where the outside world slows down.",
     icon: "🌿",
   },
   {
-    title: "Work-Friendly Space",
-    description: "Charging stations, comfortable seating, and an inspiring ambiance make Café Clair the ideal spot for remote work or creative sessions.",
-    icon: "💻",
+    title: "Work-Friendly Nook",
+    description: "A calm, inspiring space perfect for solo work sessions, creative thinking, or simply a good read over a slow coffee.",
+    icon: "✏️",
   },
   {
-    title: "All-Day Dining & Bar",
-    description: "From morning pastries and brunch plates to lunch, dinner, and a full bar programme — we have something special for every part of your day.",
-    icon: "🍷",
-  },
-  {
-    title: "Private Events",
-    description: "Host your special occasion with us. Curated menus, a refined setting, and attentive service make every event at Café Clair unforgettable.",
-    icon: "🎉",
+    title: "Intimate Garden Seating",
+    description: "With limited indoor and outdoor seating, every visit to Dear Lola feels personal, unhurried and completely yours.",
+    icon: "🪴",
   },
 ];
 
@@ -35,8 +35,8 @@ export default function Community() {
           <RevealOnScroll delay={0.1}>
             <div className="relative aspect-[4/5] overflow-hidden order-2 lg:order-1">
               <Image
-                src="/images/community.jpg"
-                alt="Dining at Café Clair"
+                src="/images/dl-counter.jpg"
+                alt="Dear Lola Café counter and menu board"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -48,7 +48,7 @@ export default function Community() {
           <RevealOnScroll className="order-1 lg:order-2">
             <div>
               <span className="font-body text-sm tracking-[0.3em] uppercase text-sage mb-4 block">
-                Why Café Clair
+                Why Dear Lola
               </span>
               <h2 className="heading-lg mb-6">
                 More Than
@@ -56,8 +56,8 @@ export default function Community() {
                 A Café
               </h2>
               <p className="body-lg mb-10">
-                Café Clair is a destination — where pâtisserie, restaurant,
-                and bar come together in one refined space for every mood and moment.
+                Dear Lola is a feeling — a little oasis in Osu where handmade
+                food, good coffee and a beautiful space come together just for you.
               </p>
 
               <div className="space-y-8">

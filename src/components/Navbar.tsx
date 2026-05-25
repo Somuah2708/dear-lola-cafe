@@ -62,7 +62,10 @@ export default function Navbar() {
               scrolled ? "text-coffee-brown" : "text-cream"
             }`}
           >
-            CAFÉ CLAIR
+            <span className="flex items-center gap-2.5">
+              <span className={`w-3 h-3 rounded-full border-2 transition-colors duration-300 ${scrolled ? "border-coffee-brown bg-coffee-brown/20" : "border-cream bg-cream/30"}`} />
+              DEAR LOLA
+            </span>
           </Link>
 
           {/* Desktop Nav */}

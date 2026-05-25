@@ -4,12 +4,12 @@ import Image from "next/image";
 import RevealOnScroll from "./RevealOnScroll";
 
 const posts = [
-  { src: "/images/gallery-latte-2.jpg", alt: "Morning coffee", likes: 241 },
-  { src: "/images/menu-cheesecake-nice.jpg", alt: "Pastry case", likes: 318 },
-  { src: "/images/ig-brunch-reel.jpg", alt: "Brunch vibes", likes: 402 },
-  { src: "/images/gallery-brunch-2.jpg", alt: "Brunch spread", likes: 275 },
-  { src: "/images/gallery-tart-fruit.jpg", alt: "Macarons", likes: 347 },
-  { src: "/images/menu-pastry-display.jpg", alt: "Pastry display", likes: 289 },
+  { src: "/images/dl-latte.jpg",    alt: "Morning latte at Dear Lola",      likes: 184 },
+  { src: "/images/dl-food-2.jpg",   alt: "Today's croissant plate",         likes: 261 },
+  { src: "/images/dl-food-3.jpg",   alt: "Garden table, butterfly pea lemonade", likes: 312 },
+  { src: "/images/dl-interior.jpg", alt: "Inside Dear Lola, Osu",           likes: 203 },
+  { src: "/images/dl-food-5.jpg",   alt: "Egg avocado toast",               likes: 275 },
+  { src: "/images/dl-hero.jpg",     alt: "Our garden — come find us in Osu", likes: 418 },
 ];
 
 export default function InstagramFeed() {
@@ -19,11 +19,11 @@ export default function InstagramFeed() {
         <RevealOnScroll>
           <div className="text-center mb-14">
             <span className="font-body text-sm tracking-[0.3em] uppercase text-sage mb-4 block">
-              @cafeclairgh
+              @dearlola.cafe
             </span>
             <h2 className="heading-lg mb-4">Follow Along</h2>
             <p className="body-md max-w-2xl mx-auto">
-              Join our community on Instagram for daily inspiration, new dishes and behind-the-scenes moments.
+              Join us on Instagram for daily bakes, handcrafted drinks and quiet moments from our little café in Osu.
             </p>
           </div>
         </RevealOnScroll>
@@ -32,7 +32,7 @@ export default function InstagramFeed() {
           {posts.map((post, i) => (
             <RevealOnScroll key={post.src} delay={i * 0.06}>
               <a
-                href="https://instagram.com/cafeclairgh"
+                href="https://instagram.com/dearlola.cafe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative aspect-square overflow-hidden group block"

@@ -10,24 +10,24 @@ const config: Config = {
     extend: {
       colors: {
         coffee: {
-          brown: "#2A4035",
-          dark: "#1A2E26",
-          light: "#3E5C4A",
+          brown: "#2A9C97",
+          dark: "#1E7570",
+          light: "#38B5B0",
         },
         cream: {
-          DEFAULT: "#F5F1EB",
-          dark: "#E8E0D5",
-          light: "#FAF8F5",
+          DEFAULT: "#FAF8F4",
+          dark: "#EDE8DF",
+          light: "#FEFCFA",
         },
         sage: {
-          DEFAULT: "#7A8F7B",
-          dark: "#5F7360",
-          light: "#B07A2F",
+          DEFAULT: "#7A9B72",
+          dark: "#5E7A55",
+          light: "#C4864A",
         },
         dark: "#1F1F1F",
       },
       fontFamily: {
-        display: ["var(--font-playfair)", "serif"],
+        display: ["var(--font-cormorant)", "serif"],
         body: ["var(--font-inter)", "sans-serif"],
       },
       animation: {

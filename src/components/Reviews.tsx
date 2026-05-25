@@ -6,28 +6,28 @@ import RevealOnScroll from "./RevealOnScroll";
 
 const reviews = [
   {
-    name: "Akosua D.",
-    quote: "The Crab Mango Tart alone is worth the trip. Café Clair has quickly become my favourite spot in East Legon — the food and atmosphere are unmatched.",
+    name: "Ama K.",
+    quote: "The sakura pink croissant is everything. It's almost too pretty to eat — almost. Dear Lola is my favourite little spot in Osu, hands down.",
     stars: 5,
   },
   {
-    name: "Kofi N.",
-    quote: "Absolutely stunning space with an incredible menu. The Champion Jollof is rich, spicy and so comforting. Highly recommend this gem!",
+    name: "Kwesi O.",
+    quote: "The creamy mushroom prawn pasta is absolutely delicious. Rich, perfectly balanced, and the portions are generous. I keep coming back for it!",
     stars: 5,
   },
   {
-    name: "Maame B.",
-    quote: "I've been to many cafés in Accra but Café Clair is on another level. The pastries are divine and the staff are so warm and welcoming.",
+    name: "Efua T.",
+    quote: "Such a beautiful, plant-filled space. The strawberry milkshake was incredible and the staff made me feel so welcome. A real hidden gem in Osu.",
     stars: 5,
   },
   {
-    name: "Nana O.",
-    quote: "Perfect for a working brunch — charging spots, beautiful ambiance, great coffee. The outdoor seating is gorgeous too. Won't be my last visit.",
-    stars: 4,
+    name: "Naa B.",
+    quote: "I come here to work and the smoked salmon focaccia never disappoints. Quiet, cosy, great wifi vibes. Perfect spot for a solo morning out.",
+    stars: 5,
   },
   {
-    name: "Esi A.",
-    quote: "Had The Bombastic for brunch and it was exactly that — bombastic! The service was quick and friendly. A must-visit in East Legon.",
+    name: "Kojo M.",
+    quote: "The waffles with berries were absolutely worth it. Everything tastes homemade because it is — you can tell the love that goes into every dish.",
     stars: 5,
   },
 ];
@@ -90,7 +90,7 @@ export default function Reviews() {
             </span>
             <h2 className="heading-lg mb-4">What People Say</h2>
             <p className="body-md max-w-2xl mx-auto">
-              Don&apos;t just take our word for it — hear from our guests.
+              Words from the people who make Dear Lola what it is.
             </p>
           </div>
         </RevealOnScroll>
