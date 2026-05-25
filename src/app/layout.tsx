@@ -15,13 +15,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "THEIA | Afro-Mediterranean Café, Bookstore & Creative Space in Accra",
+  title: "CAFÉ CLAIR | Pâtisserie, Restaurant & Bar in East Legon, Accra",
   description:
-    "THEIA — an Afro-Mediterranean inspired, family-owned café, bookstore, work hub, community, art & events space in Airport Residential Area, Accra, Ghana.",
-  keywords: ["THEIA", "café", "Accra", "Ghana", "bookstore", "coworking", "creative space", "Afro-Mediterranean", "brunch", "events"],
+    "Café Clair — a refined concept blending pâtisserie, restaurant & bar, offering handcrafted pastries, meals and perfectly brewed coffee in East Legon, Accra, Ghana.",
+  keywords: ["Café Clair", "café", "Accra", "Ghana", "patisserie", "East Legon", "brunch", "restaurant", "bar", "pastries", "coffee"],
   openGraph: {
-    title: "THEIA",
-    description: "An Afro-Mediterranean inspired café, bookstore & creative space in Accra.",
+    title: "CAFÉ CLAIR",
+    description: "A refined pâtisserie, restaurant & bar in East Legon, Accra.",
     type: "website",
   },
 };

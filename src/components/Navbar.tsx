@@ -62,7 +62,7 @@ export default function Navbar() {
               scrolled ? "text-coffee-brown" : "text-cream"
             }`}
           >
-            THEIA HOUSE
+            CAFÉ CLAIR
           </Link>
 
           {/* Desktop Nav */}
@@ -152,7 +152,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.08, duration: 0.4 }}
-                  className="font-display text-3xl font-bold text-coffee-brown hover:text-sage transition-colors duration-300"
+                  className="font-display text-3xl font-bold text-coffee-brown hover:text-sage transition-colors duration-300 tracking-wide"
                 >
                   {link.name}
                 </motion.a>

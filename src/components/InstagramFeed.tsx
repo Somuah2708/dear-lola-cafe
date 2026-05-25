@@ -4,12 +4,12 @@ import Image from "next/image";
 import RevealOnScroll from "./RevealOnScroll";
 
 const posts = [
-  { src: "/images/instagram/ig-1.jpg", alt: "Coffee art", likes: 142 },
-  { src: "/images/instagram/ig-2.jpg", alt: "Café morning", likes: 98 },
-  { src: "/images/instagram/ig-3.jpg", alt: "Pastry display", likes: 215 },
-  { src: "/images/instagram/ig-4.jpg", alt: "Brunch spread", likes: 176 },
-  { src: "/images/instagram/ig-5.jpg", alt: "Cozy seating", likes: 124 },
-  { src: "/images/instagram/ig-6.jpg", alt: "Evening vibes", likes: 189 },
+  { src: "/images/gallery-latte-2.jpg", alt: "Morning coffee", likes: 241 },
+  { src: "/images/menu-cheesecake-nice.jpg", alt: "Pastry case", likes: 318 },
+  { src: "/images/ig-brunch-reel.jpg", alt: "Brunch vibes", likes: 402 },
+  { src: "/images/gallery-brunch-2.jpg", alt: "Brunch spread", likes: 275 },
+  { src: "/images/gallery-tart-fruit.jpg", alt: "Macarons", likes: 347 },
+  { src: "/images/menu-pastry-display.jpg", alt: "Pastry display", likes: 289 },
 ];
 
 export default function InstagramFeed() {
@@ -19,11 +19,11 @@ export default function InstagramFeed() {
         <RevealOnScroll>
           <div className="text-center mb-14">
             <span className="font-body text-sm tracking-[0.3em] uppercase text-sage mb-4 block">
-              @theiahouse
+              @cafeclairgh
             </span>
             <h2 className="heading-lg mb-4">Follow Along</h2>
             <p className="body-md max-w-2xl mx-auto">
-              Join our community on Instagram for daily inspiration.
+              Join our community on Instagram for daily inspiration, new dishes and behind-the-scenes moments.
             </p>
           </div>
         </RevealOnScroll>
@@ -32,7 +32,7 @@ export default function InstagramFeed() {
           {posts.map((post, i) => (
             <RevealOnScroll key={post.src} delay={i * 0.06}>
               <a
-                href="https://instagram.com/theiahouse"
+                href="https://instagram.com/cafeclairgh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative aspect-square overflow-hidden group block"

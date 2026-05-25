@@ -13,7 +13,7 @@ export default function Experience() {
             <div className="relative aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
               <Image
                 src="/images/experience.jpg"
-                alt="Inside Theia House"
+                alt="Inside Café Clair"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -30,29 +30,31 @@ export default function Experience() {
                 The Experience
               </span>
               <h2 className="heading-lg mb-6">
-                Where Food Meets
+                Where Craft Meets
                 <br />
-                Nature &amp; Culture
+                Refined Taste
               </h2>
               <p className="body-lg mb-6">
-                When food meets nature, and culture meets art, a space becomes
-                an experience. At Theia, every corner is versatile — switching
-                from a reading nook to a boardroom in the blink of an eye.
+                At Café Clair, every detail is considered. From the warm
+                croissants that greet your morning to the perfectly pulled
+                espresso and the elegant evening cocktails — this is dining
+                as it should be.
               </p>
               <p className="body-md mb-8">
-                Whether you&apos;re here for an all-day breakfast, a focused work
-                session with fast WiFi, or browsing our multi-lingual library —
-                Theia is your space to pause, create, and connect.
+                With beautiful indoor and outdoor spaces, a stunning interior,
+                and a menu that spans breakfast through dinner, Café Clair is
+                the destination for those who appreciate the finer things in
+                Accra&apos;s East Legon.
               </p>
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-coffee-brown/10">
                 <div>
-                  <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">12K+</p>
-                  <p className="font-body text-sm text-dark/50 mt-1">Community</p>
+                  <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">8K+</p>
+                  <p className="font-body text-sm text-dark/50 mt-1">Followers</p>
                 </div>
                 <div>
-                  <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">740+</p>
-                  <p className="font-body text-sm text-dark/50 mt-1">Moments Shared</p>
+                  <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">5★</p>
+                  <p className="font-body text-sm text-dark/50 mt-1">Rated</p>
                 </div>
                 <div>
                   <p className="font-display text-3xl md:text-4xl font-bold text-coffee-brown">7</p>

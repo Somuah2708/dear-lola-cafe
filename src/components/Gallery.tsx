@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 import RevealOnScroll from "./RevealOnScroll";
 
 const galleryImages = [
-  { src: "/images/gallery/coffee-1.jpg", alt: "Latte art in a ceramic cup", span: "col-span-1" },
-  { src: "/images/gallery/interior-1.jpg", alt: "Sunny café interior", span: "col-span-1 md:row-span-2" },
-  { src: "/images/gallery/pastry-1.jpg", alt: "Fresh croissants on a wooden board", span: "col-span-1" },
-  { src: "/images/gallery/brunch-1.jpg", alt: "Beautiful brunch plate", span: "col-span-1" },
-  { src: "/images/gallery/coffee-2.jpg", alt: "Pour over brewing", span: "col-span-1" },
-  { src: "/images/gallery/interior-2.jpg", alt: "Cozy corner seating", span: "col-span-1" },
-  { src: "/images/gallery/pastry-2.jpg", alt: "Chocolate cake slice", span: "col-span-1" },
-  { src: "/images/gallery/brunch-2.jpg", alt: "Avocado toast close up", span: "col-span-1" },
+  { src: "/images/gallery-latte-art.jpg", alt: "Coffee crafted with care at Café Clair", span: "col-span-1" },
+  { src: "/images/ig-real-1.jpg", alt: "The beautiful Café Clair dining room", span: "col-span-1 md:row-span-2" },
+  { src: "/images/menu-pastry-display.jpg", alt: "Freshly baked pastries and pain au chocolat", span: "col-span-1" },
+  { src: "/images/gallery-coffee-art.jpg", alt: "Our signature brunch plate", span: "col-span-1" },
+  { src: "/images/gallery-latte-2.jpg", alt: "Friends over coffee at Café Clair", span: "col-span-1" },
+  { src: "/images/ig-sausage-croissant.jpg", alt: "Inside Café Clair — East Legon", span: "col-span-1" },
+  { src: "/images/gallery-tart-fruit.jpg", alt: "Handcrafted macarons from our pâtisserie", span: "col-span-1" },
+  { src: "/images/menu-eggs-brunch.jpg", alt: "Eggs Benedict — a brunch favourite", span: "col-span-1" },
 ];
 
 export default function Gallery() {
@@ -26,7 +26,7 @@ export default function Gallery() {
             </span>
             <h2 className="heading-lg mb-4">A Glimpse Inside</h2>
             <p className="body-md max-w-2xl mx-auto">
-              Moments captured at Theia — from golden lattes to sun-filled corners.
+              Moments captured at Café Clair — from golden pastries to sun-filled spaces.
             </p>
           </div>
         </RevealOnScroll>

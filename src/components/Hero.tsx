@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Background Fallback Image */}
       <Image
         src="/images/hero-fallback.jpg"
-        alt="Theia House"
+        alt="Café Clair"
         fill
         priority
         className="object-cover z-0"
@@ -41,7 +41,7 @@ export default function Hero() {
           />
 
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream tracking-wide leading-[1.1]">
-            THEIA HOUSE
+            CAFÉ CLAIR
           </h1>
 
           <motion.p
@@ -50,7 +50,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mt-6 md:mt-8 font-body text-lg md:text-xl text-cream/70 tracking-wide font-light max-w-xl mx-auto"
           >
-            An Afro-Mediterranean inspired café, bookstore &amp; creative space in Accra.
+            A refined pâtisserie, restaurant &amp; bar in East Legon, Accra.
           </motion.p>
 
           {/* Buttons */}

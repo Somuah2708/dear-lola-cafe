@@ -6,28 +6,28 @@ import RevealOnScroll from "./RevealOnScroll";
 
 const reviews = [
   {
-    name: "Ama K.",
-    quote: "Hands down the best coffee in Accra. The ambiance is incredible — I come here every weekend.",
+    name: "Akosua D.",
+    quote: "The Crab Mango Tart alone is worth the trip. Café Clair has quickly become my favourite spot in East Legon — the food and atmosphere are unmatched.",
     stars: 5,
   },
   {
-    name: "Kwame A.",
-    quote: "Theia has become my go-to workspace. Great WiFi, amazing pastries, and the staff is so friendly.",
+    name: "Kofi N.",
+    quote: "Absolutely stunning space with an incredible menu. The Champion Jollof is rich, spicy and so comforting. Highly recommend this gem!",
     stars: 5,
   },
   {
-    name: "Sarah M.",
-    quote: "The brunch menu is divine. The French toast alone is worth the visit. Such a beautiful space.",
+    name: "Maame B.",
+    quote: "I've been to many cafés in Accra but Café Clair is on another level. The pastries are divine and the staff are so warm and welcoming.",
     stars: 5,
   },
   {
-    name: "Daniel O.",
-    quote: "I hosted a creative meetup here and it was perfect. The private area is well thought out.",
+    name: "Nana O.",
+    quote: "Perfect for a working brunch — charging spots, beautiful ambiance, great coffee. The outdoor seating is gorgeous too. Won't be my last visit.",
     stars: 4,
   },
   {
-    name: "Efua B.",
-    quote: "From the pour-over coffee to the tiramisu — everything is crafted with so much love and care.",
+    name: "Esi A.",
+    quote: "Had The Bombastic for brunch and it was exactly that — bombastic! The service was quick and friendly. A must-visit in East Legon.",
     stars: 5,
   },
 ];
@@ -90,7 +90,7 @@ export default function Reviews() {
             </span>
             <h2 className="heading-lg mb-4">What People Say</h2>
             <p className="body-md max-w-2xl mx-auto">
-              Don&apos;t just take our word for it — hear from our community.
+              Don&apos;t just take our word for it — hear from our guests.
             </p>
           </div>
         </RevealOnScroll>

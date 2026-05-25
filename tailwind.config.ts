@@ -10,9 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         coffee: {
-          brown: "#4B2E2B",
-          dark: "#3A2320",
-          light: "#6B4E4B",
+          brown: "#2A4035",
+          dark: "#1A2E26",
+          light: "#3E5C4A",
         },
         cream: {
           DEFAULT: "#F5F1EB",
@@ -22,7 +22,7 @@ const config: Config = {
         sage: {
           DEFAULT: "#7A8F7B",
           dark: "#5F7360",
-          light: "#9AAD9B",
+          light: "#B07A2F",
         },
         dark: "#1F1F1F",
       },

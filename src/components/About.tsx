@@ -15,33 +15,32 @@ export default function About() {
                 Our Story
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-cream mb-6">
-                About Theia
+                About Café Clair
               </h2>
               <p className="font-body text-lg text-cream/70 leading-relaxed mb-6">
-                THEIA is an Afro-Mediterranean inspired, family-owned café,
-                bookstore, work hub, community, art &amp; events space tucked
-                away in the Airport Residential Area of Accra, Ghana.
+                Café Clair is a refined new concept in the heart of East Legon,
+                thoughtfully managed by District Management. We blend the best of
+                pâtisserie, restaurant, and bar into one beautifully curated space.
               </p>
               <p className="font-body text-base text-cream/60 leading-relaxed mb-4">
-                Intentional spaces nurture mindful living. Sustainability
-                isn&apos;t just a trend to us — it&apos;s how we live, create, and share
-                our space with you. Our glass and plastic waste is recycled
-                weekly, our cushions are made from repurposed fabrics, and
-                our multi-lingual library grows through community donations.
+                Every detail at Café Clair is intentional — from our handcrafted
+                pastries baked fresh each morning to our perfectly brewed coffees
+                and an evening bar programme designed for meaningful moments. We
+                believe a great space feeds more than just hunger.
               </p>
               <p className="font-body text-base text-cream/60 leading-relaxed mb-8">
-                More than a café, Theia is about the people who walk through
-                our doors — the readers, the dreamers, the creators, the
-                community.
+                Whether you&apos;re joining us for a leisurely brunch, a focused work
+                session, or a special evening out — Café Clair is your home away
+                from home in East Legon.
               </p>
 
               {/* Signature */}
               <div className="pt-6 border-t border-cream/10">
                 <p className="font-display text-xl italic text-cream/80">
-                  &ldquo;Intentional spaces nurture mindful living.&rdquo;
+                  &ldquo;Where every visit is an experience worth savouring.&rdquo;
                 </p>
                 <p className="font-body text-sm text-cream/50 mt-2 tracking-wider uppercase">
-                  — The Theia Family
+                  — The Café Clair Team
                 </p>
               </div>
             </div>
@@ -53,7 +52,7 @@ export default function About() {
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src="/images/about.jpg"
-                  alt="The team at Theia House"
+                  alt="Inside Café Clair"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

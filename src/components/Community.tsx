@@ -5,24 +5,24 @@ import RevealOnScroll from "./RevealOnScroll";
 
 const features = [
   {
-    title: "Work Hub",
-    description: "Fast WiFi, peaceful surroundings, and great coffee — every corner doubles as a focused workspace or nature-immersed boardroom.",
+    title: "Indoor & Outdoor Dining",
+    description: "Beautiful, thoughtfully designed indoor and outdoor spaces — perfect for intimate breakfasts, relaxed lunches, or breezy evening gatherings.",
+    icon: "🌿",
+  },
+  {
+    title: "Work-Friendly Space",
+    description: "Charging stations, comfortable seating, and an inspiring ambiance make Café Clair the ideal spot for remote work or creative sessions.",
     icon: "💻",
   },
   {
-    title: "Bookstore & Library",
-    description: "Browse our growing multi-lingual library built through community donations. Join our Just Read Book Club every Sunday.",
-    icon: "📚",
+    title: "All-Day Dining & Bar",
+    description: "From morning pastries and brunch plates to lunch, dinner, and a full bar programme — we have something special for every part of your day.",
+    icon: "🍷",
   },
   {
-    title: "Art & Events Space",
-    description: "From corporate workshops to artisan markets and creative meetups — our versatile space transforms for every occasion.",
-    icon: "🎨",
-  },
-  {
-    title: "Community Gatherings",
-    description: "A family-owned space where connection and focus coexist beautifully. Brunch with friends, network, or simply unwind.",
-    icon: "🤝",
+    title: "Private Events",
+    description: "Host your special occasion with us. Curated menus, a refined setting, and attentive service make every event at Café Clair unforgettable.",
+    icon: "🎉",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function Community() {
             <div className="relative aspect-[4/5] overflow-hidden order-2 lg:order-1">
               <Image
                 src="/images/community.jpg"
-                alt="Community gathering at Theia"
+                alt="Dining at Café Clair"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -48,7 +48,7 @@ export default function Community() {
           <RevealOnScroll className="order-1 lg:order-2">
             <div>
               <span className="font-body text-sm tracking-[0.3em] uppercase text-sage mb-4 block">
-                Community
+                Why Café Clair
               </span>
               <h2 className="heading-lg mb-6">
                 More Than
@@ -56,8 +56,8 @@ export default function Community() {
                 A Café
               </h2>
               <p className="body-lg mb-10">
-                THEIA is a café, bookstore, work hub, community, art &amp;
-                events space — where connection and focus coexist beautifully.
+                Café Clair is a destination — where pâtisserie, restaurant,
+                and bar come together in one refined space for every mood and moment.
               </p>
 
               <div className="space-y-8">
