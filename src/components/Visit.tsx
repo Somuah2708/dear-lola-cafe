@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import RevealOnScroll from "./RevealOnScroll";
-import { site, mapsLink, mapsEmbed } from "@/lib/site";
+import { site, mapsLink, mapsEmbed, whatsappLink } from "@/lib/site";
 
 export default function Visit() {
   return (
@@ -51,11 +51,16 @@ export default function Visit() {
               </p>
             </div>
             <div className="info-block">
-              <h3>Get in Touch</h3>
+              <h3>{whatsappLink ? "Call or WhatsApp" : "Get in Touch"}</h3>
+              {site.phone && <a href={`tel:${site.phone.tel}`}>{site.phone.display}</a>}
+              {whatsappLink && (
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  Chat on WhatsApp →
+                </a>
+              )}
               <a href={site.instagram.url} target="_blank" rel="noopener noreferrer">
                 {site.instagram.handle}
               </a>
-              {site.phone && <a href={`tel:${site.phone.tel}`}>{site.phone.display}</a>}
             </div>
             <div className="info-block">
               <h3>Directions</h3>

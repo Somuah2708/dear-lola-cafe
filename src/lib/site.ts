@@ -24,12 +24,11 @@ export const site = {
     mapsQuery: "Dear Lola Bakehouse, 3 Osu Link, Osu, Accra",
   },
 
-  // UNVERIFIED: only found on a third-party directory listing, not on Dear Lola's own channels.
-  // Set to null to hide every call link on the site.
+  // Verified with the business: same number for calls and WhatsApp. Set to null to hide call links.
   phone: { display: "+233 55 371 4884", tel: "+233553714884" } as { display: string; tel: string } | null,
 
-  // Set to a number (digits only, e.g. "233553714884") once the client confirms a WhatsApp line
-  whatsapp: null as string | null,
+  // WhatsApp number, digits only. Set to null to hide every WhatsApp link.
+  whatsapp: "233553714884" as string | null,
 };
 
 export const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address.mapsQuery)}`;
