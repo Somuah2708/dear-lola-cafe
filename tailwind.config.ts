@@ -28,7 +28,8 @@ const config: Config = {
       },
       fontFamily: {
         display: ["var(--font-cormorant)", "serif"],
-        body: ["var(--font-inter)", "sans-serif"],
+        script: ["var(--font-josefin)", "sans-serif"],
+        body: ["var(--font-jost)", "sans-serif"],
       },
       animation: {
         "fade-in": "fadeIn 0.8s ease-out forwards",

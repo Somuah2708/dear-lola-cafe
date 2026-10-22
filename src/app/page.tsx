@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Experience from "@/components/Experience";
-import Menu from "@/components/Menu";
-import Gallery from "@/components/Gallery";
+import IntroBand from "@/components/IntroBand";
 import About from "@/components/About";
-import Community from "@/components/Community";
-import Reviews from "@/components/Reviews";
+import Menu from "@/components/Menu";
+import Experience from "@/components/Experience";
+import Gallery from "@/components/Gallery";
 import Visit from "@/components/Visit";
+import Reserve from "@/components/Reserve";
 import InstagramFeed from "@/components/InstagramFeed";
 import Footer from "@/components/Footer";
 
@@ -15,13 +15,13 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <Experience />
-      <Menu />
-      <Gallery />
+      <IntroBand />
       <About />
-      <Community />
-      <Reviews />
+      <Menu />
+      <Experience />
+      <Gallery />
       <Visit />
+      <Reserve />
       <InstagramFeed />
       <Footer />
     </main>

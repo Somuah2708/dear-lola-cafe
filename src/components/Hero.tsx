@@ -1,95 +1,66 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function Hero() {
-  const scrollTo = (id: string) => {
-    const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  // The courtyard clip is portrait, so it only replaces the photo on portrait screens
+  const [portrait, setPortrait] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(orientation: portrait)");
+    const update = () => setPortrait(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden">
-      {/* Background Fallback Image */}
-      <Image
-        src="/images/dl-hero.jpg"
-        alt="Dear Lola Café garden"
-        fill
-        priority
-        className="object-cover z-0"
-        sizes="100vw"
-      />
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/50 via-black/25 to-black/60" />
-
-      {/* Content */}
-      <div className="relative z-[2] h-full flex flex-col items-start justify-center section-padding">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
-          className="max-w-2xl"
-        >
-          {/* Decorative line */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="w-16 h-[1px] bg-cream/50 mb-8 origin-left"
+    <section id="home" className="hero">
+      <div className="hero-media">
+        <Image
+          src="/images/courtyard-pathway-wide.jpg"
+          alt="The garden courtyard path at Dear Lola Bakehouse"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+        {portrait && (
+          <video
+            className="absolute inset-0"
+            src="/videos/courtyard-bougainvillea.mp4"
+            poster="/images/courtyard-bougainvillea-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
           />
+        )}
+      </div>
+      <div className="hero-overlay" />
 
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream tracking-wide leading-[1.1]">
-            DEAR LOLA
-          </h1>
+      <div className="hero-content">
+        <span className="hero-eyebrow">Osu &nbsp;·&nbsp; Accra &nbsp;·&nbsp; Ghana</span>
+        <h1 className="hero-title">Dear Lola</h1>
+        <span className="hero-script">Bakehouse</span>
+        <span className="hero-sans">A home for things made with care</span>
+        <p className="hero-sub">Small-batch bakes &nbsp;·&nbsp; Beautiful coffee &nbsp;·&nbsp; Garden courtyard</p>
+        <div className="hero-btns">
+          <a href="#menu" className="btn btn-wine">
+            View Menu
+          </a>
+          <a href="#visit" className="btn btn-outline-white">
+            Visit Us
+          </a>
+        </div>
+      </div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-6 md:mt-8 font-body text-lg md:text-xl text-cream/70 tracking-wide font-light max-w-md"
-          >
-            Artisan bakes &amp; handcrafted drinks in the heart of Osu, Accra.
-          </motion.p>
-
-          {/* Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="mt-10 md:mt-12 flex flex-col sm:flex-row items-start gap-4"
-          >
-            <button
-              onClick={() => scrollTo("#menu")}
-              className="px-10 py-4 bg-cream text-coffee-brown font-body text-sm font-medium tracking-[0.2em] uppercase
-              transition-all duration-300 hover:bg-cream-dark hover:shadow-lg hover:-translate-y-0.5"
-            >
-              View Menu
-            </button>
-            <button
-              onClick={() => scrollTo("#visit")}
-              className="px-10 py-4 border border-cream/50 text-cream font-body text-sm font-medium tracking-[0.2em] uppercase
-              transition-all duration-300 hover:bg-cream/10 hover:border-cream hover:-translate-y-0.5"
-            >
-              Visit Us
-            </button>
-          </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.8 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-[1px] h-12 bg-gradient-to-b from-cream/0 via-cream/60 to-cream/0"
-          />
-        </motion.div>
+      <div className="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div className="scroll-line" />
       </div>
     </section>
   );

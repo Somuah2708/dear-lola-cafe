@@ -1,60 +1,139 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import RevealOnScroll from "./RevealOnScroll";
 
 const galleryImages = [
-  { src: "/images/dl-hero.jpg",    alt: "The garden entrance at Dear Lola, Osu",             aspect: "aspect-[4/5]" },
-  { src: "/images/dl-latte.jpg",   alt: "A handcrafted latte with the Dear Lola logo",        aspect: "aspect-square" },
-  { src: "/images/dl-mirrors.jpg", alt: "The signature circular mirror wall inside Dear Lola", aspect: "aspect-square" },
-  { src: "/images/dl-food-3.jpg",  alt: "Garden table with butterfly pea lemonade",           aspect: "aspect-[4/5]" },
-  { src: "/images/dl-interior.jpg",alt: "Warm wood interior and purple bench seating",        aspect: "aspect-[4/3]" },
-  { src: "/images/dl-food-2.jpg",  alt: "A beautifully plated croissant — made fresh daily",  aspect: "aspect-square" },
-  { src: "/images/dl-garden.jpg",  alt: "The lush garden seating area at Dear Lola",          aspect: "aspect-[4/3]" },
-  { src: "/images/dl-food-5.jpg",  alt: "Egg avocado toast — a Dear Lola favourite",          aspect: "aspect-square" },
+  { src: "/images/courtyard-pathway.jpg", alt: "The flagstone garden path lined with blue pots and palms" },
+  { src: "/images/dl-mirrors.jpg", alt: "The signature circular mirror wall inside Dear Lola" },
+  { src: "/images/dl-food-3.jpg", alt: "Garden table with a croissant and butterfly pea lemonade" },
+  { src: "/images/dl-latte.jpg", alt: "A handcrafted iced latte" },
+  { src: "/images/dl-food-5.jpg", alt: "Egg and avocado toast — a breakfast favourite" },
+  { src: "/images/dl-counter.jpg", alt: "The bakehouse counter and menu board" },
+  { src: "/images/dl-garden.jpg", alt: "Cushioned seating in the leafy garden nook" },
+  { src: "/images/dl-interior.jpg", alt: "Warm wood interior with garden views" },
 ];
 
 export default function Gallery() {
+  const [open, setOpen] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (open === null) return;
+    const n = galleryImages.length;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(null);
+      if (e.key === "ArrowRight") setOpen((i) => (i === null ? i : (i + 1) % n));
+      if (e.key === "ArrowLeft") setOpen((i) => (i === null ? i : (i - 1 + n) % n));
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const step = (d: number) =>
+    setOpen((i) => (i === null ? i : (i + d + galleryImages.length) % galleryImages.length));
+
   return (
-    <section id="gallery" className="section-spacing section-padding bg-cream">
-      <div className="max-w-7xl mx-auto">
+    <section id="gallery" className="gallery">
+      <div className="container-x">
         <RevealOnScroll>
-          <div className="text-center mb-14">
-            <span className="font-body text-sm tracking-[0.3em] uppercase text-sage mb-4 block">
-              Gallery
-            </span>
-            <h2 className="heading-lg mb-4">A Glimpse Inside</h2>
-            <p className="body-md max-w-2xl mx-auto">
-              Moments from our little café in Osu — golden pastries, quiet mornings and a whole lot of green.
+          <div className="gallery-head">
+            <div>
+              <span className="label-script">Gallery</span>
+              <h2 className="section-title">
+                The look <em>&amp; feel</em>
+              </h2>
+            </div>
+            <p className="body-copy">
+              Golden bakes, quiet mornings and a whole lot of green — moments from our little bakehouse in Osu.
             </p>
           </div>
         </RevealOnScroll>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {galleryImages.map((img, i) => (
-            <RevealOnScroll key={img.src} delay={i * 0.07}>
-              <motion.div
-                className={`relative overflow-hidden group cursor-pointer ${img.aspect}`}
-                whileHover={{ scale: 1.01 }}
-                transition={{ duration: 0.4 }}
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-coffee-brown/0 group-hover:bg-coffee-brown/30 transition-all duration-500" />
-                <div className="absolute inset-0 flex items-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <p className="font-body text-sm text-cream tracking-wide leading-relaxed">{img.alt}</p>
-                </div>
-              </motion.div>
-            </RevealOnScroll>
-          ))}
-        </div>
       </div>
+
+      <div className="gallery-grid">
+        {galleryImages.map((img, i) => (
+          <button
+            key={img.src}
+            type="button"
+            className={`g-item g${i + 1}`}
+            onClick={() => setOpen(i)}
+            aria-label={`Open photo: ${img.alt}`}
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              style={{ objectFit: "cover" }}
+              sizes="(max-width: 960px) 50vw, 34vw"
+            />
+          </button>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {open !== null && (
+          <motion.div
+            className="lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Photo viewer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setOpen(null)}
+          >
+            <button type="button" className="lightbox-close" aria-label="Close" onClick={() => setOpen(null)}>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                <path d="M5 5l14 14M19 5L5 19" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              className="lightbox-nav prev"
+              aria-label="Previous photo"
+              onClick={(e) => {
+                e.stopPropagation();
+                step(-1);
+              }}
+            >
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                <path d="M15 4l-8 8 8 8" />
+              </svg>
+            </button>
+            <div className="lightbox-img" onClick={(e) => e.stopPropagation()}>
+              <Image
+                key={galleryImages[open].src}
+                src={galleryImages[open].src}
+                alt={galleryImages[open].alt}
+                fill
+                style={{ objectFit: "contain" }}
+                sizes="100vw"
+              />
+            </div>
+            <button
+              type="button"
+              className="lightbox-nav next"
+              aria-label="Next photo"
+              onClick={(e) => {
+                e.stopPropagation();
+                step(1);
+              }}
+            >
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                <path d="M9 4l8 8-8 8" />
+              </svg>
+            </button>
+            <p className="lightbox-caption">{galleryImages[open].alt}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

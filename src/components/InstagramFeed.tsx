@@ -2,59 +2,53 @@
 
 import Image from "next/image";
 import RevealOnScroll from "./RevealOnScroll";
+import { site } from "@/lib/site";
+
+const IG_URL = site.instagram.url;
 
 const posts = [
-  { src: "/images/dl-latte.jpg",    alt: "Morning latte at Dear Lola",      likes: 184 },
-  { src: "/images/dl-food-2.jpg",   alt: "Today's croissant plate",         likes: 261 },
-  { src: "/images/dl-food-3.jpg",   alt: "Garden table, butterfly pea lemonade", likes: 312 },
-  { src: "/images/dl-interior.jpg", alt: "Inside Dear Lola, Osu",           likes: 203 },
-  { src: "/images/dl-food-5.jpg",   alt: "Egg avocado toast",               likes: 275 },
-  { src: "/images/dl-hero.jpg",     alt: "Our garden — come find us in Osu", likes: 418 },
+  { src: "/images/dl-food-2.jpg", alt: "Croissant plate" },
+  { src: "/images/courtyard-evening.jpg", alt: "Evening in the courtyard" },
+  { src: "/images/dl-food-6.png", alt: "House focaccia with egg" },
+  { src: "/images/dl-hero.jpg", alt: "Garden seating" },
+  { src: "/images/dl-food-1.jpg", alt: "Cake and breakfast plates" },
+  { src: "/images/dl-window.jpg", alt: "Window onto the garden" },
 ];
 
 export default function InstagramFeed() {
   return (
-    <section className="section-spacing section-padding bg-cream-light">
-      <div className="max-w-7xl mx-auto">
+    <section className="section">
+      <div className="container-x">
         <RevealOnScroll>
-          <div className="text-center mb-14">
-            <span className="font-body text-sm tracking-[0.3em] uppercase text-sage mb-4 block">
-              @dearlola.cafe
-            </span>
-            <h2 className="heading-lg mb-4">Follow Along</h2>
-            <p className="body-md max-w-2xl mx-auto">
-              Join us on Instagram for daily bakes, handcrafted drinks and quiet moments from our little café in Osu.
-            </p>
+          <div className="ig-header">
+            <div>
+              <span className="label-script">On the &rsquo;Gram</span>
+              <h2 className="section-title">
+                Follow <em>along</em>
+              </h2>
+            </div>
+            <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="ig-handle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
+              </svg>
+              {site.instagram.handle}
+            </a>
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          {posts.map((post, i) => (
-            <RevealOnScroll key={post.src} delay={i * 0.06}>
-              <a
-                href="https://instagram.com/dearlola.cafe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative aspect-square overflow-hidden group block"
-              >
-                <Image
-                  src={post.src}
-                  alt={post.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                />
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-coffee-brown/0 group-hover:bg-coffee-brown/40 transition-all duration-400 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center gap-2">
-                    <svg className="w-5 h-5 text-cream" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                    </svg>
-                    <span className="font-body text-sm text-cream font-medium">{post.likes}</span>
-                  </div>
-                </div>
-              </a>
-            </RevealOnScroll>
+        <div className="ig-grid">
+          {posts.map((post) => (
+            <a key={post.src} href={IG_URL} target="_blank" rel="noopener noreferrer" className="ig-post" aria-label={`${post.alt} — view on Instagram`}>
+              <Image src={post.src} alt={post.alt} fill style={{ objectFit: "cover" }} sizes="(max-width: 560px) 50vw, (max-width: 960px) 33vw, 17vw" />
+              <span className="ig-overlay" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                </svg>
+              </span>
+            </a>
           ))}
         </div>
       </div>
