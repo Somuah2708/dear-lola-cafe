@@ -13,34 +13,38 @@ export default function About() {
         <RevealOnScroll>
           <span className="label-script">Our Story</span>
           <h2 className="section-title">
-            A home for things
+            A little more room to breathe.
             <br />
-            <em>made with care.</em>
+            <em>A little more joy in the everyday.</em>
           </h2>
           <div className="divider" />
           <p className="story-lead">
-            Dear Lola Bakehouse is a little corner of calm in the heart of Osu, Accra — a neighbourhood bakehouse
-            and café built around the simple pleasure of good food, thoughtful details, and the joy of slowing down.
+            Dear Lola began with a love for baking, a few croissants, and the joy of making something that brings
+            people happiness. What started as a personal experiment grew into something bigger: a place to share good
+            food, bring people together, and make the everyday feel a little more special.
           </p>
           <p className="body-copy">
-            Inspired by the charm of European bakehouses and the warmth of a garden at home, we bring together{" "}
-            <strong>small-batch bakes, beautifully made coffee</strong>, and a menu rooted in quality ingredients and
-            honest craftsmanship.
+            Nestled in Osu, Accra, Dear Lola is our expression of what a neighbourhood café in the tropics can be. A
+            space that works with the warmth of our climate, where greenery offers shade, natural materials bring a
+            sense of grounding, and the boundary between indoors and outdoors feels beautifully open. Thoughtfully
+            designed with local materials and the hands of local artisans, it is a celebration of our surroundings
+            rather than an escape from them.
           </p>
           <p className="body-copy">
-            From buttery, freshly baked croissants to our signature breakfast plates, seasonal treats, and carefully
-            prepared cups of coffee, everything we do is guided by a love for the little things. We believe food should
-            be made with intention, ingredients should speak for themselves, and even an ordinary morning can feel
-            special.
+            The same philosophy guides our kitchen. We believe the best things take time, practice, and a little bit of
+            love. From our buttery croissants to seasonal plates and carefully made coffee, we keep things simple, let
+            good ingredients shine, and make everything with intention.
           </p>
           <p className="body-copy">
-            Settle into our garden courtyard, linger over breakfast, meet a friend for coffee, or simply take a moment
-            for yourself.
+            But what makes Dear Lola truly special is what happens around the table. The conversations that run a
+            little longer, the laughter shared over breakfast, the quiet moments spent in the garden. We wanted to
+            create a space between home and work where people could feel at ease, feel cared for, and simply be.
           </p>
           <p className="body-copy">
-            At Dear Lola, there is always room to slow down, savour something lovely, and feel at home.
+            Because food has a wonderful way of bringing us back to one another. And being part of someone’s day, even
+            in a small way, is a privilege we never take lightly.
           </p>
-          <p className="story-sign">Welcome to Dear Lola Bakehouse.</p>
+          <p className="story-sign">Come as you are. Stay a little longer. There’s always room at Dear Lola.</p>
           <div className="chips">
             {chips.map((c) => (
               <span key={c} className="chip">
