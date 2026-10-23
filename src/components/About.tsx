@@ -54,8 +54,8 @@ export default function About() {
         <RevealOnScroll delay={0.15} className="story-img-wrap">
           <div className="story-img">
             <Image
-              src="/images/courtyard-evening.jpg"
-              alt="Cushioned armchairs and palms in the Dear Lola garden courtyard"
+              src="/images/garden-path.jpg"
+              alt="The flagstone garden path lined with palms and blue pots"
               fill
               style={{ objectFit: "cover" }}
               sizes="(max-width: 960px) 100vw, 50vw"

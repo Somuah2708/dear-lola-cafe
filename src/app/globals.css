@@ -288,6 +288,9 @@ body {
 .menu-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 72px; }
 .menu-item { padding: 20px 0; border-bottom: 1px solid var(--border); }
 .menu-item-name { font-family: var(--font-display); font-size: 1.35rem; font-weight: 400; color: var(--ink); line-height: 1.25; }
+.menu-item-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.menu-item-price { font-family: var(--font-display); font-size: 1.1rem; color: var(--wine); white-space: nowrap; }
+.menu-section-note { grid-column: 1 / -1; text-align: center; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: -24px 0 8px; }
 .menu-item-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.7; margin-top: 4px; }
 .menu-note a { color: var(--wine); text-decoration: underline; text-underline-offset: 3px; }
 .menu-note { text-align: center; line-height: 1.9; font-size: 0.72rem; letter-spacing: 0.12em; color: var(--muted); margin-top: 40px; text-transform: uppercase; }

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Dear Lola Bakehouse",
     description: "A home for things made with care — small-batch bakes, coffee and a garden courtyard in Osu, Accra.",
     type: "website",
-    images: ["/images/courtyard-pathway.jpg"],
+    images: ["/images/hero-courtyard-wide.jpg"],
   },
 };
 

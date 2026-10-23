@@ -19,8 +19,8 @@ export default function Hero() {
     <section id="home" className="hero">
       <div className="hero-media">
         <Image
-          src="/images/courtyard-pathway-wide.jpg"
-          alt="The garden courtyard path at Dear Lola Bakehouse"
+          src="/images/hero-courtyard-wide.jpg"
+          alt="Lounge seating and bougainvillea in the Dear Lola garden courtyard"
           fill
           priority
           sizes="100vw"
@@ -29,8 +29,8 @@ export default function Hero() {
         {portrait && (
           <video
             className="absolute inset-0"
-            src="/videos/courtyard-bougainvillea.mp4"
-            poster="/images/courtyard-bougainvillea-poster.jpg"
+            src="/videos/courtyard-lounge.mp4"
+            poster="/images/courtyard-lounge-poster.jpg"
             autoPlay
             muted
             loop

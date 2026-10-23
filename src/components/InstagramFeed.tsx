@@ -7,12 +7,12 @@ import { site } from "@/lib/site";
 const IG_URL = site.instagram.url;
 
 const posts = [
-  { src: "/images/dl-food-2.jpg", alt: "Croissant plate" },
-  { src: "/images/courtyard-evening.jpg", alt: "Evening in the courtyard" },
-  { src: "/images/dl-food-6.png", alt: "House focaccia with egg" },
-  { src: "/images/dl-hero.jpg", alt: "Garden seating" },
-  { src: "/images/dl-food-1.jpg", alt: "Cake and breakfast plates" },
-  { src: "/images/dl-window.jpg", alt: "Window onto the garden" },
+  { src: "/images/croissant-sandwich.jpg", alt: "Croissant sandwich" },
+  { src: "/images/garden-path.jpg", alt: "The garden path" },
+  { src: "/images/prawn-toast.jpg", alt: "Tiger prawn on toast" },
+  { src: "/images/lounge-corner.jpg", alt: "Courtyard lounge" },
+  { src: "/images/brunch-spread.jpg", alt: "Brunch spread" },
+  { src: "/images/croissant-tray.jpg", alt: "Fresh croissants" },
 ];
 
 export default function InstagramFeed() {

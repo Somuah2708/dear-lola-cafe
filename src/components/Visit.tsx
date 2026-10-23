@@ -12,7 +12,7 @@ export default function Visit() {
         <RevealOnScroll>
           <div className="street-img">
             <Image
-              src="/images/osu-street.jpg"
+              src="/images/street-palms.jpg"
               alt="The quiet, palm-lined street leading to Dear Lola in Osu"
               fill
               style={{ objectFit: "cover" }}

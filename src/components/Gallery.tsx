@@ -6,14 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import RevealOnScroll from "./RevealOnScroll";
 
 const galleryImages = [
-  { src: "/images/courtyard-pathway.jpg", alt: "The flagstone garden path lined with blue pots and palms" },
-  { src: "/images/dl-mirrors.jpg", alt: "The signature circular mirror wall inside Dear Lola" },
-  { src: "/images/dl-food-3.jpg", alt: "Garden table with a croissant and butterfly pea lemonade" },
-  { src: "/images/dl-latte.jpg", alt: "A handcrafted iced latte" },
-  { src: "/images/dl-food-5.jpg", alt: "Egg and avocado toast — a breakfast favourite" },
-  { src: "/images/dl-counter.jpg", alt: "The bakehouse counter and menu board" },
-  { src: "/images/dl-garden.jpg", alt: "Cushioned seating in the leafy garden nook" },
-  { src: "/images/dl-interior.jpg", alt: "Warm wood interior with garden views" },
+  { src: "/images/garden-guests.jpg", alt: "Guests relaxing under the palms and bougainvillea" },
+  { src: "/images/brunch-spread.jpg", alt: "A brunch spread with a sparkling drink and cappuccino" },
+  { src: "/images/croissant-tray.jpg", alt: "A tray of freshly baked croissants in the garden" },
+  { src: "/images/prawn-toast.jpg", alt: "Tiger prawn on toast with french fries" },
+  { src: "/images/honey-chilli-wings.jpg", alt: "Honey chilli chicken wings" },
+  { src: "/images/lounge-corner.jpg", alt: "A marble-topped table among the plants in the courtyard lounge" },
+  { src: "/images/croissant-sandwich.jpg", alt: "A croissant sandwich with french fries" },
+  { src: "/images/pantry-shelves.jpg", alt: "Wooden shelves of jams, jars and woven baskets in the shop" },
 ];
 
 export default function Gallery() {

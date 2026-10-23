@@ -56,7 +56,7 @@ export default function Experience() {
       </div>
 
       <div className="media-panel">
-        <LazyVideo src="/videos/courtyard-lounge.mp4" poster="/images/courtyard-lounge-poster.jpg" />
+        <LazyVideo src="/videos/garden-courtyard.mp4" poster="/images/garden-courtyard-poster.jpg" />
         <span className="video-tag">Our garden courtyard</span>
       </div>
     </section>
