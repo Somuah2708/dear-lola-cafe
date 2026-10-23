@@ -19,7 +19,7 @@ export default function About() {
           </h2>
           <div className="divider" />
           <p className="story-lead">
-            Dear Lola began with a love for baking, a few croissants, and the joy of making something that brings
+            Dear Lola began with a love for baking a few croissants, and the joy of making something that brings
             people happiness. What started as a personal experiment grew into something bigger: a place to share good
             food, bring people together, and make the everyday feel a little more special.
           </p>

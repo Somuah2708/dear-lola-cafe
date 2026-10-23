@@ -28,7 +28,7 @@ const jost = Jost({
 export const metadata: Metadata = {
   title: "Dear Lola Bakehouse | Bakehouse & Café in Osu, Accra",
   description:
-    "Dear Lola Bakehouse is a neighbourhood bakehouse and café in the heart of Osu, Accra — small-batch bakes, beautifully made coffee and a garden courtyard made for slowing down.",
+    "Dear Lola Bakehouse is a neighbourhood bakehouse and café in the heart of Osu, Accra — small-batch bakes, great coffee and a garden courtyard made for slowing down.",
   keywords: ["Dear Lola", "Dear Lola Bakehouse", "bakehouse", "café", "Accra", "Ghana", "Osu", "croissants", "breakfast", "brunch", "coffee", "garden courtyard"],
   openGraph: {
     title: "Dear Lola Bakehouse",

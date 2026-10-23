@@ -225,7 +225,7 @@ const categories = Object.keys(menuData);
 const highlights = [
   "Buttery, freshly baked croissants",
   "Signature breakfast plates",
-  "Beautifully made coffee",
+  "Great coffee",
   "Seasonal treats",
   "A little shop in our courtyard garden",
 ];
@@ -247,11 +247,11 @@ export default function Menu() {
             <h2 className="section-title">
               Bakes, breakfast
               <br />
-              <em>&amp; beautiful coffee</em>
+              <em>&amp; great coffee</em>
             </h2>
             <div className="divider" />
             <p className="body-copy">
-              Small-batch bakes, beautifully made coffee and a menu rooted in quality ingredients and honest
+              Small-batch bakes, great coffee and a menu rooted in quality ingredients and honest
               craftsmanship — made with intention, so the ingredients can speak for themselves.
             </p>
             <ul className="highlights">

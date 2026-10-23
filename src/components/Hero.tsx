@@ -47,7 +47,7 @@ export default function Hero() {
         <h1 className="hero-title">Dear Lola</h1>
         <span className="hero-script">Bakehouse</span>
         <span className="hero-sans">A home for things made with care</span>
-        <p className="hero-sub">Small-batch bakes &nbsp;·&nbsp; Beautiful coffee &nbsp;·&nbsp; Garden courtyard</p>
+        <p className="hero-sub">Small-batch bakes &nbsp;·&nbsp; Great coffee &nbsp;·&nbsp; Garden courtyard</p>
         <div className="hero-btns">
           <a href="#menu" className="btn btn-wine">
             View Menu
