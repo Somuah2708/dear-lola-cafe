@@ -26,6 +26,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dearlolagh.com"),
   title: "Dear Lola Bakehouse | Bakehouse & Café in Osu, Accra",
   description:
     "Dear Lola Bakehouse is a neighbourhood bakehouse and café in the heart of Osu, Accra — small-batch bakes, great coffee and a garden courtyard made for slowing down.",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#7a2533",
+  themeColor: "#81b0d2",
 };
 
 export default function RootLayout({

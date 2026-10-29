@@ -49,7 +49,7 @@ export default function Hero() {
         <span className="hero-sans">A home for things made with care</span>
         <p className="hero-sub">Small-batch bakes &nbsp;·&nbsp; Great coffee &nbsp;·&nbsp; Garden courtyard</p>
         <div className="hero-btns">
-          <a href="#menu" className="btn btn-wine">
+          <a href="#menu" className="btn btn-blue">
             View Menu
           </a>
           <a href="#visit" className="btn btn-outline-white">

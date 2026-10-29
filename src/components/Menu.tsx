@@ -68,12 +68,12 @@ const menuData: Record<string, MenuSection> = {
       },
       {
         name: "Honey Chilli Chicken Wings",
-        description: "Crispy wings in a sticky honey chilli glaze, served with garlic yoghurt sauce",
+        description: "Crispy wings in a sticky honey chilli glaze — sweet, spicy and savoury",
         price: "130",
       },
       {
         name: "Barbecue Chicken Wings",
-        description: "Crispy wings in a sticky barbecue glaze — sweet, spicy and savoury",
+        description: "Crispy wings in a sticky barbecue glaze",
         price: "130",
       },
       {
@@ -97,7 +97,7 @@ const menuData: Record<string, MenuSection> = {
       },
       {
         name: "Tiramisu French Toast",
-        description: "Pan-fried house-baked brioche, white chocolate chantilly cream, cocoa dusting, espresso cream",
+        description: "Pan-fried house-baked brioche, mascarpone cream, cocoa dusting, espresso cream",
         price: "200",
       },
       {
@@ -262,10 +262,10 @@ export default function Menu() {
               ))}
             </ul>
             <div className="btn-row">
-              <a href="#menu-board" className="btn btn-wine">
+              <a href="#menu-board" className="btn btn-blue">
                 See the Menu
               </a>
-              <a href="#visit" className="btn btn-outline-wine">
+              <a href="#visit" className="btn btn-outline-blue">
                 Visit Us
               </a>
             </div>

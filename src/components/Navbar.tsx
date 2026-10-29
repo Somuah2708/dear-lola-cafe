@@ -109,7 +109,7 @@ export default function Navbar() {
             ))}
             <motion.a
               href="#contact"
-              className="btn btn-wine"
+              className="btn btn-blue"
               onClick={() => setMobileOpen(false)}
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
