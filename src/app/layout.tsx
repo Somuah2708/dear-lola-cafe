@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Josefin_Sans, Jost } from "next/font/google";
 import "./globals.css";
+import { site } from "@/lib/site";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -31,12 +32,48 @@ export const metadata: Metadata = {
   description:
     "Dear Lola Bakehouse is a neighbourhood bakehouse and café in the heart of Osu, Accra — small-batch bakes, great coffee and a garden courtyard made for slowing down.",
   keywords: ["Dear Lola", "Dear Lola Bakehouse", "bakehouse", "café", "Accra", "Ghana", "Osu", "croissants", "breakfast", "brunch", "coffee", "garden courtyard"],
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Dear Lola Bakehouse",
+    siteName: "Dear Lola Bakehouse",
+    url: "/",
+    locale: "en_GH",
     description: "A home for things made with care — small-batch bakes, coffee and a garden courtyard in Osu, Accra.",
     type: "website",
     images: ["/images/hero-courtyard-wide.jpg"],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dear Lola Bakehouse",
+    description: "Small-batch bakes, coffee and a garden courtyard in Osu, Accra.",
+    images: ["/images/hero-courtyard-wide.jpg"],
+  },
+};
+
+// Structured data so Google can show the café as a local business (hours, address, phone)
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  name: site.name,
+  url: "https://dearlolagh.com",
+  image: "https://dearlolagh.com/images/hero-courtyard-wide.jpg",
+  ...(site.phone ? { telephone: site.phone.tel } : {}),
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address.line1,
+    addressLocality: "Osu, Accra",
+    addressCountry: "GH",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  ],
+  servesCuisine: ["Bakery", "Café", "Breakfast", "Brunch", "Coffee"],
+  sameAs: [site.instagram.url],
 };
 
 export const viewport: Viewport = {
@@ -52,7 +89,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${josefin.variable} ${jost.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
